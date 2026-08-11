@@ -1,0 +1,136 @@
+<!-- Indicamos que este documento utiliza HTML5 -->
+<!DOCTYPE html>
+
+<!-- Comenzamos el documento HTML y establecemos el idioma en español -->
+<html lang="es">
+
+<head>
+
+    <!-- Permitimos utilizar caracteres especiales como á, é, í, ó, ú y ñ -->
+    <meta charset="UTF-8">
+
+    <!-- Hacemos que la página se adapte correctamente a celulares y computadoras -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparecerá en la pestaña del navegador -->
+    <title>Calculadora</title>
+
+    <!-- Conectamos este archivo HTML con nuestro archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+
+    <!-- Contenedor principal de toda la calculadora -->
+    <div class="calculadora">
+
+        <!-- Título principal de la aplicación -->
+        <h1>Calculadora</h1>
+
+        <!-- Pequeña descripción debajo del título -->
+        <p class="descripcion">
+            Realizá una operación matemática
+        </p>
+
+        <!-- Formulario que contiene todos los elementos de la calculadora -->
+        <form>
+
+            <!-- Contenedor del primer número -->
+            <div class="campo">
+
+                <!-- Texto que indica qué debe ingresar el usuario -->
+                <label for="numero1">
+                    Primer número
+                </label>
+
+                <!-- Campo donde el usuario ingresará el primer número -->
+                <input
+                    type="number"
+                    id="numero1"
+                    name="numero1"
+                    placeholder="Ej: 25"
+                >
+
+            </div>
+
+            <!-- Contenedor de la selección de operación -->
+            <div class="campo">
+
+                <!-- Texto que indica qué debe seleccionar el usuario -->
+                <label for="operacion">
+                    Operación
+                </label>
+
+                <!-- Lista desplegable para seleccionar una operación -->
+                <select id="operacion" name="operacion">
+
+                    <!-- Opción para realizar una suma -->
+                    <option value="+">
+                        +
+                    </option>
+
+                    <!-- Opción para realizar una resta -->
+                    <option value="-">
+                        -
+                    </option>
+
+                    <!-- Opción para realizar una multiplicación -->
+                    <option value="*">
+                        ×
+                    </option>
+
+                    <!-- Opción para realizar una división -->
+                    <option value="/">
+                        ÷
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Contenedor del segundo número -->
+            <div class="campo">
+
+                <!-- Texto que indica qué debe ingresar el usuario -->
+                <label for="numero2">
+                    Segundo número
+                </label>
+
+                <!-- Campo donde el usuario ingresará el segundo número -->
+                <input
+                    type="number"
+                    id="numero2"
+                    name="numero2"
+                    placeholder="Ej: 5"
+                >
+
+            </div>
+
+            <!-- Botón principal de la calculadora -->
+            <button type="submit">
+                Calcular
+            </button>
+
+        </form>
+
+        <!-- Contenedor donde posteriormente Django mostrará el resultado -->
+        <div class="resultado">
+
+            <!-- Título de la sección resultado -->
+            <span class="titulo-resultado">
+                Resultado
+            </span>
+
+            <!-- Espacio donde posteriormente aparecerá el resultado -->
+            <span class="valor-resultado">
+                —
+            </span>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

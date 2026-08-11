@@ -1,0 +1,258 @@
+/* Quitamos los márgenes y espacios predeterminados del navegador */
+* {
+    margin: 0;
+    padding: 0;
+
+    /* Hacemos que el ancho y alto incluyan el padding y el borde */
+    box-sizing: border-box;
+}
+
+
+/* Configuramos el cuerpo completo de la página */
+body {
+
+    /* Indicamos el tipo de letra que utilizaremos */
+    font-family: Arial, sans-serif;
+
+    /* Establecemos un fondo suave para toda la página */
+    background-color: #eef2f7;
+
+    /* Hacemos que el contenido ocupe toda la altura de la pantalla */
+    min-height: 100vh;
+
+    /* Utilizamos Flexbox para posicionar la calculadora */
+    display: flex;
+
+    /* Centramos horizontalmente la calculadora */
+    justify-content: center;
+
+    /* Centramos verticalmente la calculadora */
+    align-items: center;
+
+    /* Agregamos espacio alrededor de la calculadora */
+    padding: 20px;
+}
+
+
+/* Contenedor principal de la calculadora */
+.calculadora {
+
+    /* Establecemos el ancho máximo de la calculadora */
+    width: 100%;
+
+    /* La calculadora no podrá superar los 400 píxeles */
+    max-width: 400px;
+
+    /* Establecemos el color de fondo de la tarjeta */
+    background-color: white;
+
+    /* Agregamos espacio interno */
+    padding: 30px;
+
+    /* Redondeamos las esquinas */
+    border-radius: 18px;
+
+    /* Agregamos una sombra suave */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Estilos para el título principal */
+h1 {
+
+    /* Centramos el texto */
+    text-align: center;
+
+    /* Establecemos el tamaño de la letra */
+    font-size: 32px;
+
+    /* Agregamos espacio debajo del título */
+    margin-bottom: 8px;
+
+    /* Cambiamos el color del título */
+    color: #1f2937;
+}
+
+
+/* Estilos para la descripción */
+.descripcion {
+
+    /* Centramos el texto */
+    text-align: center;
+
+    /* Cambiamos el color del texto */
+    color: #6b7280;
+
+    /* Agregamos espacio debajo */
+    margin-bottom: 30px;
+
+    /* Establecemos el tamaño de la letra */
+    font-size: 14px;
+}
+
+
+/* Contenedor de cada campo del formulario */
+.campo {
+
+    /* Organizamos los elementos utilizando Flexbox */
+    display: flex;
+
+    /* Colocamos los elementos uno debajo del otro */
+    flex-direction: column;
+
+    /* Agregamos espacio entre los elementos */
+    gap: 8px;
+
+    /* Agregamos espacio debajo de cada campo */
+    margin-bottom: 20px;
+}
+
+
+/* Estilos para las etiquetas de los campos */
+label {
+
+    /* Hacemos que la etiqueta aparezca como un bloque */
+    display: block;
+
+    /* Cambiamos el tamaño del texto */
+    font-size: 14px;
+
+    /* Hacemos que el texto sea un poco más grueso */
+    font-weight: bold;
+
+    /* Cambiamos el color */
+    color: #374151;
+}
+
+
+/* Estilos compartidos entre los inputs y el select */
+input,
+select {
+
+    /* Hacemos que ocupen todo el ancho disponible */
+    width: 100%;
+
+    /* Agregamos espacio interno */
+    padding: 12px;
+
+    /* Establecemos el tamaño del texto */
+    font-size: 16px;
+
+    /* Agregamos un borde */
+    border: 1px solid #d1d5db;
+
+    /* Redondeamos las esquinas */
+    border-radius: 10px;
+
+    /* Establecemos el color de fondo */
+    background-color: #f9fafb;
+
+    /* Quitamos el contorno predeterminado */
+    outline: none;
+}
+
+
+/* Cambiamos el aspecto del campo cuando el usuario hace clic */
+input:focus,
+select:focus {
+
+    /* Cambiamos el color del borde */
+    border-color: #2563eb;
+}
+
+
+/* Estilos del botón Calcular */
+button {
+
+    /* Hacemos que el botón ocupe todo el ancho */
+    width: 100%;
+
+    /* Agregamos espacio interno */
+    padding: 13px;
+
+    /* Quitamos el borde predeterminado */
+    border: none;
+
+    /* Redondeamos las esquinas */
+    border-radius: 10px;
+
+    /* Cambiamos el color de fondo */
+    background-color: #2563eb;
+
+    /* Cambiamos el color del texto */
+    color: white;
+
+    /* Aumentamos el tamaño del texto */
+    font-size: 16px;
+
+    /* Hacemos que el texto sea más grueso */
+    font-weight: bold;
+
+    /* Cambiamos el cursor cuando pasa por encima */
+    cursor: pointer;
+
+    /* Agregamos una pequeña transición */
+    transition: 0.2s;
+}
+
+
+/* Cambiamos el aspecto del botón cuando pasamos el mouse */
+button:hover {
+
+    /* Oscurecemos ligeramente el botón */
+    background-color: #1d4ed8;
+}
+
+
+/* Contenedor del resultado */
+.resultado {
+
+    /* Separamos el resultado del botón */
+    margin-top: 25px;
+
+    /* Agregamos espacio interno */
+    padding: 18px;
+
+    /* Cambiamos el color de fondo */
+    background-color: #f3f4f6;
+
+    /* Redondeamos las esquinas */
+    border-radius: 10px;
+
+    /* Centramos el contenido */
+    text-align: center;
+}
+
+
+/* Texto "Resultado" */
+.titulo-resultado {
+
+    /* Hacemos que aparezca como un bloque */
+    display: block;
+
+    /* Cambiamos el color */
+    color: #6b7280;
+
+    /* Cambiamos el tamaño */
+    font-size: 14px;
+
+    /* Agregamos espacio debajo */
+    margin-bottom: 5px;
+}
+
+
+/* Valor que mostrará posteriormente el resultado */
+.valor-resultado {
+
+    /* Hacemos que aparezca como un bloque */
+    display: block;
+
+    /* Aumentamos el tamaño del resultado */
+    font-size: 28px;
+
+    /* Hacemos que sea más grueso */
+    font-weight: bold;
+
+    /* Cambiamos el color */
+    color: #1f2937;
+}
